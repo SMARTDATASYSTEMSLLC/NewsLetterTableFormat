@@ -1,0 +1,39 @@
+﻿body {
+}
+
+
+
+.padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 22px;
+    font-size: 12px;
+    font-family: Tw Cen MT;
+    font-weight: 500;
+    word-spacing: 1px;
+    text-wrap: normal;
+    word-wrap: break-word;
+    color: black;
+}
+
+.LightGray {
+    background-color: #99999a;
+}
+
+.DarkGray {
+    background-color: #55565a;
+}
+
+.LightGreen {
+    background-color: #c3dd89;
+}
+
+.DarkGreen {
+    background-color: #799a3d;
+}
+
+.MediumGreen {
+    background-color: #96c93d;
+}

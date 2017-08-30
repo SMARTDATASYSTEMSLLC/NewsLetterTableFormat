@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "NewstoHTML";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/StyleBoxes.css" rel="stylesheet" type="text/css" />
+    @*<script src="~/Scripts/jspdf.min.js"></script>*@
+
+
+    <title>SDS NewsLetter</title>
+</head>
+<body>
+    <br />
+    <form>
+        <table id="mainTable">
+            <tr>
+                <td style="max-width:500px" id="Achivments">
+                    <img src="~/Content/SDS-logo (1).png" style="position:center; max-width:200px; height:80px;" />
+                    <br />
+                    <div class="col-xs-12 achviClass" id="AchivBoxes" style="border:none;">
+                        <div class="DarkGray padding" id="achivment">
+                            <button style="float:right; background-color:red; border:none;" class="closeButton" onclick="$(this).parent().remove();" hidden>x</button>
+                            <label style="font-family:'Tw Cen MT'; font-size:18px;color:white; font-weight:bold">
+                                Brag Box
+                            </label>
+                            <br />
+
+                            CareStar: Another great production application migration for the CareStar project team. It was completed March 25-26th. This migration went more smoothly because of the knowledge they learned from the last one. This system was larger than the last one. Keep up the amazing work.
+                            <br />
+                            Enosix: Another successful go-live with Enosix was completed in early April, this time for Ringier. We created some custom web application pages that use the SAP and Salesforce integration technology. After a late night of issue fixes, the team made it work. Thank you and congrats to Cyrus Brunner, Don Gill and Dimas Maulana.
+                            <br />
+                            HorseCo: Michael Timko swooped in and developed some fixes for HorseCo. They were struggling to fix some app features for a recent go live. The main issue was Auth0 sign in for their native Android app.  Great work Timko.
+
+
+                        </div>
+                    </div>
+                </td>
+                @*-----------------------------------------------------------------------------------------------------------------------------------------------*@
+                <td style="max-width:300px" id="Events">
+                    <div class="padding eveClass" style="background-color:#A6F277; font-size:20pt;font-weight:bold; font-family:'Tw Cen MT';color:white; height:80px">
+                        August's NewsLetter
+                    </div>
+                    <div class="LightGray padding" id="events">
+                        <button style="float:right; background-color:red; border:none;" class="closeButton" onclick="$(this).parent().remove();" hidden>x</button>
+                        <label style="font-family:'Tw Cen MT'; font-size:18px;color:#009900; font-weight:bold">
+                            Welcome to SDS
+                        </label>
+                        <br />
+                        Welcome to the following new staff:
+                        <br />
+                        Chandrakant Shetty as an Application Developer at CareSource.
+                        <br />
+                        Kiran Bezawada as a Developer in house.
+                        <br />
+                        Mary Schock as a High-Tech Anthropologist in house.
+                        <br />
+                        Rachel Kingswood as a Jr. Developer in house.
+                        <br />
+                        John Derr as an Application Developer at CareSource
+                        <br />
+                        Click each name to view and connect with these new staff members on LinkedIn.
+                        <br />
+
+                    </div>
+
+                    <br />
+                    <br />
+
+                </td>
+
+            </tr>
+
+        </table>
+    </form>
+    <div>
+        <select id="achviTemplate" hidden style="background-color:#3d3c3c; color:white">
+            <option>Select your Achivment Theme</option>
+            <option value="1">Light Gray</option>
+            <option value="2">Dark Gray</option>
+            <option value="3">Light Green</option>
+            <option value="4">Medium Green</option>
+            <option value="5">Dark Green</option>
+        </select>
+
+        <button type="button" id="addAchvi" class="hideButton" style="color:white;font-size:8px ; background-color:#808080; height:15px; width:80px" hidden>Add</button>
+
+        <select id="eventTemplate" hidden style="background-color:#3d3c3c; color:white">
+            <option>Select your Event Theme</option>
+            <option value="1">Light Gray</option>
+            <option value="2">Dark Gray</option>
+            <option value="3">Light Green</option>
+            <option value="4">Medium Green</option>
+            <option value="5">Dark Green</option>
+        </select>
+        <button type="button" id="addEvent" style="color:white;font-size:8px ; background-color:#808080; height:15px; width:80px" hidden>Add</button>
+
+        <br />
+        <button type="button" id="btnAchviments" style="color:white;font-size:10px ; background-color:#009900; height:30px; width:100px">Edit</button>
+        <br />
+        <button type="button" id="btnSaveAchiv" style="color:white;font-size:10px ; background-color:#009900; height:30px; width:100px">Save</button>
+    </div>
+
+
+    <div>
+        <button id="preview" style="float:right;width: 100px; background-color:#79d559; color:black; font-weight:500" hidden>Preview</button>
+        <br />
+        <br />
+        <button id="pdf" style="float:right;width: 100px; background-color:#79d559; color:black; font-weight:500" hidden onclick="javascript:demoFromHTML();">Save as PDF</button>
+        <br />
+        <br />
+        <button style="float:right; background-color:red; border:none;width: 80px;" id="closePreviewButton" hidden>Close</button>
+    </div>
+    <script src="~/bundles/jquery"></script>
+    <script type="text/javascript" src="~/Scripts/EditBoxes.js"></script>
+    <script type="text/javascript" src="~/Scripts/AddBoxes.js"></script>
+    <script type="text/javascript" src="~/Scripts/SaveBoxes.js"></script>
+</body>
+</html>
+
+
